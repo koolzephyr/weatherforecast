@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:id="@+id/linearLayout"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pref_location_default"
+            android:id="@+id/loc"
+            style="@style/textNormal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:id="@+id/relativeLayout"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:text="15"
+            android:id="@+id/temp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            style="@style/textBig"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/temp"
+            android:layout_toEndOf="@+id/temp"
+            android:id="@+id/icLayout"
+            android:layout_marginLeft="5dp">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/icWeather"
+                android:src="@drawable/ic_sunny_cloudy"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/icLayout"
+            android:layout_toRightOf="@+id/temp"
+            android:layout_toEndOf="@+id/temp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/desc"
+                android:layout_gravity="top"
+                style="@style/textSmall" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/unit"
+                style="@style/textSmall" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temperature"
+                android:id="@+id/tempDetail"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/max"
+                android:id="@+id/maxView"
+                android:layout_alignTop="@+id/tempDetail"
+                android:layout_toRightOf="@+id/tempDetail"
+                android:layout_toEndOf="@+id/tempDetail"
+                android:layout_marginLeft="10dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/maxTemp"
+                android:layout_alignTop="@+id/maxView"
+                android:layout_toRightOf="@+id/maxView"
+                android:layout_toEndOf="@+id/maxView"
+                android:layout_marginLeft="2dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/min"
+                android:id="@+id/minView"
+                android:layout_alignTop="@+id/maxTemp"
+                android:layout_toRightOf="@+id/maxTemp"
+                android:layout_toEndOf="@+id/maxTemp"
+                android:layout_marginLeft="10dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/minTemp"
+                android:layout_alignTop="@+id/minView"
+                android:layout_toRightOf="@+id/minView"
+                android:layout_toEndOf="@+id/minView"
+                android:layout_marginLeft="2dp"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wind"
+                android:id="@+id/windView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="14sp" />
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/speedView"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/windView"
+                android:layout_toEndOf="@+id/windView"
+                android:layout_marginLeft="58dp"
+                android:textSize="14sp" />
+-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/speed"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/windView"
+                android:layout_toEndOf="@+id/windView"
+                android:layout_marginLeft="18dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/speedUnit"
+                android:id="@+id/speedUnit"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/speed"
+                android:layout_toEndOf="@+id/speed"
+                android:layout_marginLeft="2dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/degree"
+                android:id="@+id/degView"
+                android:layout_toRightOf="@+id/speedUnit"
+                android:layout_toEndOf="@+id/speedUnit"
+                android:layout_marginLeft="10dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SW"
+                android:id="@+id/degree"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/degView"
+                android:layout_toEndOf="@+id/degView"
+                android:textSize="14sp"
+                android:layout_marginLeft="2dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/humidity"
+                android:id="@+id/humView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/humidity"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/humView"
+                android:layout_toEndOf="@+id/humView"
+                android:layout_marginLeft="32dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:id="@+id/humPercentage"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/humidity"
+                android:layout_toEndOf="@+id/humidity"
+                android:layout_marginLeft="2dp"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pressure"
+                android:id="@+id/pressView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pressure"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/pressView"
+                android:layout_toEndOf="@+id/pressView"
+                android:layout_marginLeft="32dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hPa"
+                android:id="@+id/pressStat"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/pressure"
+                android:layout_toEndOf="@+id/pressure"
+                android:layout_marginLeft="2dp"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cloud"
+                android:id="@+id/cloudView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cloud"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/cloudView"
+                android:layout_toEndOf="@+id/cloudView"
+                android:layout_marginLeft="17dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:id="@+id/cloudPercentage"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/cloud"
+                android:layout_toEndOf="@+id/cloud"
+                android:layout_marginLeft="2dp"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rain"
+                android:id="@+id/rainView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rain"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/rainView"
+                android:layout_toEndOf="@+id/rainView"
+                android:layout_marginLeft="59dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mm"
+                android:id="@+id/rainUnit"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/rain"
+                android:layout_toEndOf="@+id/rain"
+                android:layout_marginLeft="2dp"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/snow"
+                android:id="@+id/snowView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/snow"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/snowView"
+                android:layout_toEndOf="@+id/snowView"
+                android:layout_marginLeft="52dp"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mm"
+                android:id="@+id/snowUnit"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/snow"
+                android:layout_toEndOf="@+id/snow"
+                android:layout_marginLeft="2dp"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

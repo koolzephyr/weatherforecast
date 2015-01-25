@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zephyr.weatherforecast" >
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher1"
+        android:label="WeatherForecast"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="WeatherForecast" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DetailListItem"
+            android:label="DetailListItem"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.zephyr.weatherforecast.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".WeatherPreference"
+            android:label="@string/title_activity_preference"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.Parent_Activity"
+                android:value="MainActivity">
+
+            </meta-data>
+        </activity>
+    </application>
+
+</manifest>
